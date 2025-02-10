@@ -1,3 +1,90 @@
-# Default ignored files
-/shelf/
-/workspace.xml
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# Django-related files
+*.log
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# If you're using PostgreSQL, MySQL, or other databases
+*.pgdata
+*.mysql
+*.sqlite3
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+config/settings/local.py
+config/settings/*.local.py
+
+# Migrations (optional - but usually you want to keep migrations)
+# Uncomment the following if you don't want to track migrations
+# **/migrations/*.py
+# **/migrations/*.pyc
+
+# Cache, logs, and compiled assets
+*.log
+local_settings.py
+*.pot
+*.mo
+*.swp
+*.swo
+
+# Editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Python egg files
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+
+# Docker
+docker-compose.override.yml
+*.dockerfile
+*.tar
+
+# Node.js (if using frontend with Django)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Gunicorn
+gunicorn.pid
+
+# Coverage reports
+.coverage
+.tox/
+.nox/
+*.cover
+htmlcov/
+
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# Pytest
+.pytest_cache/
