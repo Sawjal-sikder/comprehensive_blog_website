@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>{% block title %} Base Page {% endblock %}</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="w-10/12 mx-auto shadow-xl ">
+  <nav>
+    <div class="flex justify-between items-center px-20 py-3 bg-indigo-200">
+    <div class="text-4xl font-bold"><a href="{% url 'home' %}">Logo</a></div>
+
+      <ul class=" flex gap-5">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+
+    </div>
+  </nav>
+    {% block body %}{% endblock %}
+  </body>
 </html>

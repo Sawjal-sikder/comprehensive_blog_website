@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog Create{% endblock %}
+
+{% block body %}
+<div class="container mt-5 px-10">
+    <div class="py-5">
+            <h2 class="text-xl font-bold border-b">Create Blog</h2>
+
+    </div>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.media }}
+
+        <div class="mb-3">
+            <label for="id_title" class="form-label">Title</label>
+            {{ form.title }}
+        </div>
+
+        <div class="mb-3">
+            <label for="id_l_description" class="form-label">Description</label>
+            {{ form.l_description }}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock body %}

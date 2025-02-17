@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ blog.title }}{% endblock %}
+{% block body %}
+
+<div>
+    <div>
+        <img src="{{ blog.image.url }}" alt="" srcset="">
+    </div>
+    <div class="px-10">
+        <div class="py-5">
+            <h1 class="text-3xl font-bold">{{ blog.title }}</h1>
+            <div class="flex gap-10 py-2">
+                <p class="text-sm"><strong>Author: </strong> {{ blog.author }}</p>
+                <p class="text-sm"> <strong> Published Date:  </strong> {{ blog.created_at }}</p>
+            </div>
+        </div>
+        <p class="text-justify">{{ blog.l_description|safe }}</p>
+
+    </div>
+    <div class="my-10 border-t">
+        {% include 'like.html' %}
+    </div>
+    <div class="my-10 border-t">
+        {% include 'comments.html' %}
+    </div>
+</div>
+
+{% endblock body %}
